@@ -7,7 +7,6 @@ import {
 import './index.css'
 import SecretView from './routes/secret';
 import Login from './routes/login';
-import Signup from './routes/signup';
 
 const router = createBrowserRouter([
   {
@@ -17,10 +16,6 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
   },
 ]);
 

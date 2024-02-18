@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BackendService } from "@genezio-sdk/genezio-auth-tutorial_us-east-1"
+import React, { useState } from 'react';
+import { BackendService } from "@genezio-sdk/genezio-google-oauth-tutorial_us-east-1"
 import { useNavigate } from 'react-router-dom';
 
 const SecretView: React.FC = () => {
@@ -8,17 +8,6 @@ const SecretView: React.FC = () => {
   const navigate = useNavigate();
   // @ts-ignore
   const [secret, setSecret] = useState('');
-  // @ts-ignore
-  const [name, setName] = useState('');
-  // @ts-ignore
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-      if (name && email) {
-          return;
-      }
-
-  }, []);
 
   const logout = async () => {
   }
@@ -38,12 +27,9 @@ const SecretView: React.FC = () => {
 
   return (
     <div className="form-container">
-      <h2>Your details</h2>
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
+      {secret ? <p>{secret}</p> : <p></p>}
       <button onClick={fetchSecret}>{ loading ? "Loading..." : "Reveal Secret" }</button>
       <button onClick={logout}>Logout</button>
-      {secret && <p>{secret}</p>}
     </div>
   );
 };

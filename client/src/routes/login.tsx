@@ -14,12 +14,12 @@ const Login: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="form-container">
       { googleLoginLoading ? 
             <>Loading...</> :  
             <button>Google Login</button>
        }
-    </>
+    </div>
   );
 };
 

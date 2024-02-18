@@ -28,7 +28,7 @@ const Login: React.FC = () => {
 
   // 4
   return (
-    <>
+    <div className="form-container">
       { googleLoginLoading ? 
             <>Loading...</> :  
             <GoogleLogin
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
                 }}
             />
        }
-    </>
+    </div>
   );
 };
 

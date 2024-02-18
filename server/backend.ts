@@ -1,4 +1,4 @@
-import { GenezioDeploy, GenezioMethod } from "@genezio/types";
+import { GenezioDeploy, GenezioMethod, GnzContext, GenezioAuth } from "@genezio/types";
 
 
 @GenezioDeploy()
@@ -6,7 +6,9 @@ export class BackendService {
   readonly secret = "Capybaras are AWESOME! Shhh... don't tell the cats!";
 
   @GenezioMethod()
-  getSecret(): string {
+  @GenezioAuth()
+  async getSecret(context: GnzContext): Promise<string> {
+    console.log(context.user)
     return this.secret;
   }
 }

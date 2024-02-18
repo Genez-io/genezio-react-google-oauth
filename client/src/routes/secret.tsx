@@ -19,6 +19,7 @@ const SecretView: React.FC = () => {
         const secret = await BackendService.getSecret();
         setSecret(secret);
       } catch (error) {
+        alert("You are not allowed to see the secret. Login first.");
         console.error(error);
         navigate('/login');
       }

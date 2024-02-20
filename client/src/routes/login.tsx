@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// 1
 import { CredentialResponse, GoogleLogin } from '@react-oauth/google';
 import { AuthService } from '@genezio/auth';
 import "./styles.css";
@@ -7,10 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  // 2
   const [googleLoginLoading, setGoogleLoginLoading] = useState(false);
 
-  // 3
   const handleGoogleLogin = async (credentialResponse: CredentialResponse) => {
       setGoogleLoginLoading(true);
       try {
@@ -26,7 +23,6 @@ const Login: React.FC = () => {
       setGoogleLoginLoading(false);
   };
 
-  // 4
   return (
     <div className="form-container">
       { googleLoginLoading ? 

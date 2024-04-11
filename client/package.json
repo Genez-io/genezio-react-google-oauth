@@ -11,7 +11,7 @@
     "install-prod-sdk": "npm install @genezio-sdk/genezio-google-oauth-tutorial@^1.0.0-prod"
   },
   "dependencies": {
-    "@genezio-sdk/genezio-google-oauth-tutorial": "npm:@genezio-sdk/genezio-google-oauth-tutorial@^1.0.0-prod",
+    "@genezio-sdk/genezio-google-oauth-tutorial": "^1.0.0-prod",
     "@genezio/vite-plugin-genezio": "^1.0.4",
     "@react-oauth/google": "^0.12.1",
     "react": "^18.2.0",

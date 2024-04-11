@@ -12,7 +12,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { AuthService } from '@genezio/auth';
 
 // 2
-AuthService.getInstance().setTokenAndRegion("0-cmvnmyiv32xlqcnjp6ce6s3gxq0aypdc", "us-east-1");
+AuthService.getInstance().setTokenAndRegion("<token>", "<region>");
 
 const router = createBrowserRouter([
   {

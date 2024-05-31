@@ -8,7 +8,6 @@ backend:
     packageManager: npm
   scripts:
     deploy: npm install
-  cloudProvider: genezio
 frontend:
   path: client
   sdk:
